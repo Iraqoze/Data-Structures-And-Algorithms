@@ -16,7 +16,6 @@ namespace HashTables
             hash.Add(12435, "Ira");
             hash.Add(123, "Papi");
             hash.Add(12435, "Dear Boy");
-
             System.Console.WriteLine(hash.Get(123));
 
             hash.Remove(123);

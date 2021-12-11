@@ -39,7 +39,6 @@ namespace HashTables
                 if (entry.Key == key)
                     entry.Value = value;
             }
-
         }
 
         //HASH
@@ -60,7 +59,6 @@ namespace HashTables
                 if (entry.Key == key)
                     return entry.Value;
             }
-
             return null;
         }
 
