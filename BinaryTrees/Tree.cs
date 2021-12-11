@@ -20,7 +20,7 @@ namespace BinaryTrees
         public Node Root;
         int Count;
 
-        //Insert
+        //INSERT
 
         public void Insert(int value)
         {
@@ -60,7 +60,7 @@ namespace BinaryTrees
 
         }
 
-        //Find
+        //FIND
         public bool Find(int value)
         {
             if (Root == null)
@@ -175,7 +175,7 @@ namespace BinaryTrees
         //Is Leaf Node
         private bool IsLeaf(Node node) => node.LeftChild == null && node.RightChild == null;
 
-        //Equals
+        //EQUALS
         public bool Equals(Tree tree)
         {
             if (tree == null)
