@@ -19,7 +19,6 @@ namespace LinkedList
         private Node Last;
         public int Count;
 
-
         //Adding First
         public void AddFirst(int value)
         {
