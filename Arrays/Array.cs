@@ -5,7 +5,8 @@ namespace Arrays
     class Array
     {
         private int[] array;
-        private int Count = 0;
+        private int Count;
+
         public Array(int lenght)
         {
             array = new int[lenght];
@@ -78,7 +79,6 @@ namespace Arrays
         {
             for (int i = 0; i < Count; i++)
                 Console.WriteLine(array[i]);
-
         }
 
     }
