@@ -14,7 +14,6 @@ namespace HashTables
                 Key = key;
                 Value = value;
             }
-
         }
 
         private LinkedList<Entry>[] Entries;
@@ -23,7 +22,7 @@ namespace HashTables
             Entries = new LinkedList<Entry>[Math.Abs(size)];
         }
 
-        //Add
+        //ADD
         public void Add(int key, string value)
         {
             var index = Hash(Math.Abs(key));
@@ -43,10 +42,10 @@ namespace HashTables
 
         }
 
-        //Hash
+        //HASH
         private int Hash(int key) => key % Entries.Length;
 
-        //Get
+        //GET
         public string Get(int key)
         {
 
@@ -65,7 +64,7 @@ namespace HashTables
             return null;
         }
 
-        //Remove
+        //REMOVE
         public void Remove(int key)
         {
             var index = Hash(Math.Abs(key));
@@ -82,7 +81,5 @@ namespace HashTables
             }
             throw new Exception("No Such Entry Exception");
         }
-
     }
-
 }
