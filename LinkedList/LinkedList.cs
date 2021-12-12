@@ -14,7 +14,6 @@ namespace LinkedList
             }
 
         }
-
         private Node First;
         private Node Last;
         public int Count;
@@ -73,7 +72,6 @@ namespace LinkedList
         }
         //Count
         public int GetCount() => Count;
-
         //Remove First
         public void RemoveFirst()
         {
