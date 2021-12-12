@@ -17,8 +17,9 @@ namespace BinaryTrees
 
         }
 
-        public Node Root;
-        int Count;
+        private Node Root;
+        private int Count;
+        private int LeavesCount;
 
         //INSERT
 
@@ -245,6 +246,33 @@ namespace BinaryTrees
 
         //COUNT
         public int GetCount() => Count;
+
+        //COUNT LEAVES
+        public int GetLeavesCount()
+        {
+            GetLeavesCount(Root);
+            return LeavesCount;
+        }
+        private void GetLeavesCount(Node root)
+        {
+
+            if (root == null)
+                return;
+
+
+            GetLeavesCount(root.LeftChild);
+            GetLeavesCount(root.RightChild);
+
+            if (IsLeaf(root))
+            {
+                LeavesCount++;
+                // Console.WriteLine(root.Value);
+            }
+
+
+
+        }
+
     }
 
 }

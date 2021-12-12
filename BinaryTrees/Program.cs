@@ -6,23 +6,23 @@ namespace BinaryTrees
     {
         static void Main(string[] args)
         {
-            Tree bst1 = new Tree();
+            Tree tree = new Tree();
 
-            bst1.Insert(30);
-            bst1.Insert(10);
-            bst1.Insert(5);
-            bst1.Insert(20);
-            bst1.Insert(15);
-            bst1.Insert(26);
-            bst1.Insert(1);
-            bst1.Insert(8);
-            bst1.Insert(50);
-            bst1.Insert(45);
-            bst1.Insert(60);
-            bst1.Insert(55);
-            bst1.Insert(70);
+            tree.Insert(30);
+            tree.Insert(10);
+            tree.Insert(5);
+            tree.Insert(20);
+            tree.Insert(15);
+            tree.Insert(26);
+            tree.Insert(1);
+            tree.Insert(8);
+            tree.Insert(50);
+            tree.Insert(45);
+            tree.Insert(60);
+            tree.Insert(55);
+            tree.Insert(70);
 
-            Tree bst = new Tree();
+            BinarySearchTree bst = new BinarySearchTree();
 
             bst.Insert(30);
             bst.Insert(10);
@@ -41,31 +41,44 @@ namespace BinaryTrees
             //System.Console.WriteLine(bst.Find(10));
 
             Console.WriteLine("\nPREORDER TRAVERSAL\n");
-            bst1.PreOrderTraversal();
+            tree.PreOrderTraversal();
             Console.WriteLine("\nINORDER TRAVERSAL\n");
-            bst1.InOrderTraversal();
+            tree.InOrderTraversal();
             Console.WriteLine("\nPOSTORDER TRAVERSAL\n");
-            bst1.PostOrderTraversal();
+            tree.PostOrderTraversal();
 
             Console.WriteLine("\nHEIGHT OF THE TREE\n");
-            System.Console.WriteLine(bst1.Height());
+            System.Console.WriteLine(tree.Height());
             System.Console.WriteLine("\nTHE MINIMUM VALUE\n");
-            System.Console.WriteLine(bst1.Min());
+            System.Console.WriteLine(tree.Min());
             System.Console.WriteLine("\nTHE MAXIMUM VALUE\n");
-            System.Console.WriteLine(bst1.Max());
-            System.Console.WriteLine("\nIS EQUAL\n");
-            System.Console.WriteLine(bst1.Equals(bst));
+            System.Console.WriteLine(tree.Max());
+            //System.Console.WriteLine("\nIS EQUAL\n");
+            // System.Console.WriteLine(bst1.Equals(bst));
             System.Console.WriteLine("\nVALIDATE BST\n");
-            System.Console.WriteLine(bst1.IsBinarySearchTree());
+            System.Console.WriteLine(tree.IsBinarySearchTree());
 
             System.Console.WriteLine("\nNODES AT DISTANCE D\n");
-            bst1.GetNodesAtDistance(3);
+            tree.GetNodesAtDistance(3);
 
             System.Console.WriteLine("\nBREADTH FIRST TRAVERSAL\n");
-            bst1.BreadthFirstTraversal();
+            tree.BreadthFirstTraversal();
 
             Console.WriteLine("\nCOUNT\n");
-            Console.WriteLine(bst1.GetCount());
+            Console.WriteLine(tree.GetCount());
+
+            Console.WriteLine("\nLEAVES COUNT\n");
+            Console.WriteLine(tree.GetLeavesCount());
+
+            Console.WriteLine("\nMAX VALUE USING RECURSION\n");
+            Console.WriteLine(bst.MaxValue());
+            Console.WriteLine("\nMIN VALUE USING RECURSION\n");
+            Console.WriteLine(bst.MinValue());
+            Console.WriteLine("\nCONTAINS VALUE USING RECURSION\n");
+            Console.WriteLine(bst.Contains(100));
+
+
+
 
             Console.ReadLine();
         }

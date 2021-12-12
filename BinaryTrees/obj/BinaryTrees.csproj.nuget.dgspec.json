@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "e:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj": {}
+    "E:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj": {}
   },
   "projects": {
-    "e:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj": {
+    "E:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "e:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj",
+        "projectUniqueName": "E:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj",
         "projectName": "BinaryTrees",
-        "projectPath": "e:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj",
+        "projectPath": "E:\\Data Structures And Algorithms\\BinaryTrees\\BinaryTrees.csproj",
         "packagesPath": "C:\\Users\\iraqo\\.nuget\\packages\\",
-        "outputPath": "e:\\Data Structures And Algorithms\\BinaryTrees\\obj\\",
+        "outputPath": "E:\\Data Structures And Algorithms\\BinaryTrees\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

@@ -15,8 +15,10 @@ namespace BinaryTrees
 
         }
 
-        public Node Root;
-        int Count;
+        private Node Root;
+        private int Count;
+
+        private int LeavesCount;
 
 
         //Insert
@@ -56,8 +58,6 @@ namespace BinaryTrees
 
             }
             Count++;
-
-
         }
 
         //Find
@@ -253,6 +253,76 @@ namespace BinaryTrees
 
         //COUNT
         public int GetCount() => Count;
+        //COUNT LEAVES
+        public int GetLeavesCount()
+        {
+            GetLeavesCount(Root);
+            return LeavesCount;
+        }
+        private void GetLeavesCount(Node root)
+        {
+
+            if (root == null)
+                return;
+
+
+            GetLeavesCount(root.LeftChild);
+            GetLeavesCount(root.RightChild);
+
+            if (IsLeaf(root))
+            {
+                LeavesCount++;
+                // Console.WriteLine(root.Value);
+            }
+
+
+
+        }
+
+
+        //MAX VALUE USING RECURSION
+        public int MaxValue()
+        {
+            if (Root == null)
+                throw new Exception("Empty Tree Exception");
+            return MaxValue(Root);
+        }
+        private int MaxValue(Node root)
+        {
+            if (IsLeaf(root))
+                return root.Value;
+
+            return MaxValue(root.RightChild);
+
+        }
+
+        //MIN VALUE USING RECURSION
+        public int MinValue()
+        {
+            if (Root == null)
+                throw new Exception("Empty Tree Exception");
+            return MinValue(Root);
+        }
+        private int MinValue(Node root)
+        {
+            if (IsLeaf(root))
+                return root.Value;
+
+            return MinValue(root.LeftChild);
+
+        }
+
+        //CONTAINS USING RECURSION
+        public bool Contains(int value) => Contains(Root, value);
+        private bool Contains(Node root, int value)
+        {
+            if (root == null)
+                return false;
+            if (root.Value == value)
+                return true;
+            return Contains(root.LeftChild, value) || Contains(root.RightChild, value);
+        }
+
     }
 
 }
