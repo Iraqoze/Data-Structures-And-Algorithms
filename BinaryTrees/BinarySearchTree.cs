@@ -55,7 +55,6 @@ namespace BinaryTrees
                     }
                     current = current.RightChild;
                 }
-
             }
             Count++;
         }
